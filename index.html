@@ -1,0 +1,1210 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Sparkling Window Cleaners Ltd. - Professional Cleaning Services</title>
+    <meta name="description" content="Get crystal clear windows with Sparkling Window Cleaners Ltd. We offer professional, reliable, and eco-friendly window cleaning services for residential and commercial properties.">
+    <meta name="keywords" content="window cleaning, professional window cleaners, commercial window cleaning, residential window cleaning, sparkling windows">
+    
+    <!-- Favicon (Embedded SVG) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,5 A45,45 0 1,1 50,95 A45,45 0 1,1 50,5 Z' fill='%2300aaff'/%3E%3Cpath d='M30,30 L70,70 M70,30 L30,70' stroke='white' stroke-width='8' stroke-linecap='round' transform='rotate(45 50 50)'/%3E%3C/svg%3E">
+
+    <!-- External Libraries (CDN) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+   (function(){
+      emailjs.init("8mmfu7EuXk_45CCVs"); // Get from EmailJS dashboard
+   })();
+    </script>
+
+</style>
+</head>
+<body>
+
+
+    
+
+
+    <!-- Reusable Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#home" class="logo nav-link">
+                <img src="../image/logo.png" alt="Sparkling Window Cleaners Ltd. Logo">
+                <span>Sparkling Windows</a></span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li id="mobile-booking-link-li"><a href="#booking" class="nav-link user-action-link">Book Now</a></li>
+                    <li id="mobile-profile-link-li" style="display: none;"><a href="#profile" class="nav-link user-action-link">My Profile</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <!-- <li><a href="#admin" class="nav-link">Admin</a></li> -->
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <a href="#booking" class="cta-button header-cta user-action-link" data-aos="zoom-in" data-aos-delay="400">
+                    <span>Book Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button id="back-button" class="mobile-nav-toggle" aria-label="Go back" style="display: none;">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ... LOGIN MODALS ... -->
+    <div id="admin-login-modal" class="login-modal">
+        <div class="login-modal-content">
+            <h2>Admin Login</h2>
+            <form id="admin-login-form">
+                <div class="form-group"><input type="text" id="admin-username" placeholder="Username" required /></div>
+                <div class="form-group"><input type="password" id="admin-password" placeholder="Password" required /></div>
+                <button type="submit" class="cta-button">Login <i class="fas fa-sign-in-alt"></i></button>
+                <div class="login-error" id="admin-login-error"></div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Vendor Modal -->
+    <div id="vendor-modal" class="login-modal">
+        <div class="login-modal-content vendor-modal-content">
+            <h2 id="vendor-modal-title">Add New Vendor</h2>
+            <form id="vendor-form">
+                <div class="form-group">
+                    <input type="text" id="vendor-name" placeholder="Full Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="vendor-email" placeholder="Email Address" required />
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="vendor-phone" placeholder="Phone Number" required />
+                </div>
+                <div class="form-group">
+                    <label class="specializations-label">Specializations:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="residential"> Residential</label>
+                        <label><input type="checkbox" value="commercial"> Commercial</label>
+                        <label><input type="checkbox" value="high-rise"> High-Rise</label>
+                        <label><input type="checkbox" value="interior"> Interior</label>
+                        <label><input type="checkbox" value="exterior"> Exterior</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="availability-label">Availability:</label>
+                    <div class="availability-grid">
+                        <label><input type="checkbox" value="monday" checked> Mon</label>
+                        <label><input type="checkbox" value="tuesday" checked> Tue</label>
+                        <label><input type="checkbox" value="wednesday" checked> Wed</label>
+                        <label><input type="checkbox" value="thursday" checked> Thu</label>
+                        <label><input type="checkbox" value="friday" checked> Fri</label>
+                        <label><input type="checkbox" value="saturday"> Sat</label>
+                        <label><input type="checkbox" value="sunday"> Sun</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="vendor-hourly-rate" placeholder="Hourly Rate (£)" min="0" step="0.01" required />
+                </div>
+                <div class="form-group">
+                    <select id="vendor-status" required>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="on_leave">On Leave</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="admin-btn secondary" id="cancel-vendor-btn">Cancel</button>
+                    <button type="submit" class="cta-button">Save Vendor</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Booking Details Modal -->
+    <div id="booking-details-modal" class="login-modal">
+        <div class="login-modal-content booking-details-modal-content">
+            <h2>Booking Details</h2>
+            <div id="booking-details-content">
+                <!-- Booking details will be populated by JavaScript -->
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="admin-btn secondary" id="close-booking-details-btn">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Assignment Modal -->
+    <div id="assignment-modal" class="login-modal">
+        <div class="login-modal-content assignment-modal-content">
+            <h2>Assign Vendor to Booking</h2>
+            <form id="assignment-form">
+                <div class="form-group">
+                    <label>Select Vendor:</label>
+                    <select id="assignment-vendor-select" required>
+                        <option value="">Choose a vendor...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Assignment Notes:</label>
+                    <textarea id="assignment-notes" placeholder="Any special instructions or notes for this assignment..." rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="admin-btn secondary" id="cancel-assignment-btn">Cancel</button>
+                    <button type="submit" class="cta-button">Assign Vendor</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="user-login-modal" class="login-modal" aria-modal="true" role="dialog">
+        <div class="login-modal-content">
+            <div class="form-flipper">
+                <!-- Login View -->
+                <div id="login-view" class="form-view active">
+                    <h2>Welcome Back!</h2>
+                    <p class="form-subheading">Sign in to book your next clean.</p>
+                    <form id="user-login-form" autocomplete="on">
+                        <div class="form-group"><input type="email" id="user-email" placeholder="Gmail Address (@gmail.com)" required autocomplete="email" /></div>
+                        <div class="form-group"><input type="password" id="user-password" placeholder="Password" required autocomplete="current-password" /></div>
+                        <button type="submit" class="cta-button">Sign In <i class="fas fa-sign-in-alt"></i></button>
+                        <div class="login-error" id="user-login-error"></div>
+                    </form>
+                    <p class="form-switcher">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                </div>
+                <!-- Signup View -->
+                <div id="signup-view" class="form-view">
+                    <h2>Create an Account</h2>
+                    <p class="form-subheading">It's quick, easy, and free.</p>
+                    <form id="user-signup-form" autocomplete="on">
+                        <div class="form-group"><input type="text" id="signup-fullname" placeholder="Full Name" required autocomplete="name" /></div>
+                        <div class="form-group"><input type="email" id="signup-email" placeholder="Gmail Address (@gmail.com)" required autocomplete="email" /></div>
+                        <div class="form-group"><input type="tel" id="signup-phone" placeholder="Phone Number" required autocomplete="tel" /></div>
+                        <div class="form-group"><input type="password" id="signup-password" placeholder="Create Password (min. 6 chars)" required autocomplete="new-password" /></div>
+                        <div class="form-group"><input type="password" id="signup-confirm-password" placeholder="Confirm Password" required autocomplete="new-password" /></div>
+                        <button type="submit" class="cta-button">Create Account <i class="fas fa-user-plus"></i></button>
+                        <div class="login-error" id="user-signup-error"></div>
+                    </form>
+                    <p class="form-switcher">Already have an account? <a href="#" id="show-login">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="signin-required-popup">Please sign in or sign up before booking.</div>
+    <!-- ... PAGES WRAPPER (home, services, about, etc.) ... -->
+    <main id="home" class="page home-page active">
+        <section class="hero">
+            <div class="hero-background"><img src="https://images.unsplash.com/photo-1596205254332-a63318acecae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="City view through a clean window"></div>
+            <div class="hero-overlay"></div>
+            <div class="water-droplets"></div>
+            <div class="hero-content glass-effect">
+                <div class="shine-effect"></div>
+                <h1 data-aos="fade-down">Crystal Clear Views, Guaranteed.</h1>
+                <p data-aos="fade-up" data-aos-delay="200">Professional, reliable, and eco-friendly window cleaning for your home and business.</p>
+                <a href="#booking" class="cta-button header-cta user-action-link" data-aos="zoom-in" data-aos-delay="400"><span>Make a Booking</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+
+                <!-- ============================================== -->
+        <!-- ===== START: NEW SECTIONS FOR HOME PAGE ===== -->
+        <!-- ============================================== -->
+
+        <!-- Feature Services Section -->
+        <section class="home-feature-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Professional Cleaning Solutions</h2>
+                    <p class="section-subtitle">We offer a range of professional cleaning solutions tailored to meet your specific needs, ensuring a perfect shine every time.</p>
+                </div>
+                <div class="home-services-grid">
+                    <!-- Service Card 1: Residential -->
+                    <div class="home-service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon"><i class="fas fa-home"></i></div>
+                        <h3>Residential Cleaning</h3>
+                        <p>From single-family homes to apartments, we make your home's windows sparkle inside and out, enhancing your view and curb appeal.</p>
+                    </div>
+                    <!-- Service Card 2: Commercial -->
+                    <div class="home-service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon"><i class="fas fa-building"></i></div>
+                        <h3>Commercial Cleaning</h3>
+                        <p>Impress your clients with spotless windows. We offer reliable cleaning for storefronts, offices, and high-rise buildings.</p>
+                    </div>
+                    <!-- Service Card 3: Gutter & Siding -->
+                    <div class="home-service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon"><i class="fas fa-water"></i></div>
+                        <h3>Gutter & Siding Wash</h3>
+                        <p>It's not just about windows! We provide gentle pressure washing services for a complete and pristine exterior clean.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Highlight Section -->
+        <section class="home-about-section">
+            <div class="container">
+                <div class="home-about-grid">
+                    <div class="about-image-container" data-aos="fade-right">
+                        <!-- **IMAGE HERE**: Replace with your photo of a cleaner on a modern building -->
+                        <img src="https://www.arch2o.com/wp-content/uploads/2022/10/Arch2O-10-of-the-most-eye-opening-iconic-buildings-of-modern-architecture.jpg" alt="Professional window cleaner working on a modern building">
+                    </div>
+                    <div class="about-content-container" data-aos="fade-left" data-aos-delay="200">
+                        <span class="content-tagline">Since 2018</span>
+                        <h2>Combining Meticulous Quality with Outstanding Customer Care.</h2>
+                        <p>We believe that clean windows can transform a space, bringing in more light and creating a brighter, more positive environment. Our team is fully trained, insured, and equipped with the latest eco-friendly cleaning technology to deliver exceptional results safely and efficiently.</p>
+                        <ul class="about-features-list">
+                            <li><i class="fas fa-check-circle"></i> Unmatched Quality & Attention to Detail</li>
+                            <li><i class="fas fa-shield-alt"></i> Safety-First Approach</li>
+                            <li><i class="fas fa-leaf"></i> Eco-Friendly & Sustainable Practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Preview Section -->
+        <section class="home-gallery-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">See Our Sparkling Transformations</h2>
+                    <p class="section-subtitle">Our work speaks for itself. See the transformation our professional cleaning brings to various properties.</p>
+                </div>
+                <div class="home-gallery-grid">
+                    <!-- Gallery Card 1: Commercial -->
+                    <div class="gallery-card-container" data-aos="fade-up">
+                        <div class="gallery-card">
+                            <!-- **IMAGE HERE**: Replace with a photo of a commercial building -->
+                            <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1740&q=80" alt="Clean commercial building windows">
+                            <div class="card-caption"><h3>Commercial Buildings</h3></div>
+                        </div>
+                    </div>
+                    <!-- Gallery Card 2: Residential -->
+                    <div class="gallery-card-container" data-aos="fade-up" data-aos-delay="200">
+                        <div class="gallery-card">
+                            <!-- **IMAGE HERE**: Replace with a photo of a residential home -->
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1740&q=80" alt="Sparkling residential home windows">
+                            <div class="card-caption"><h3>Residential Homes</h3></div>
+                        </div>
+                    </div>
+                    <!-- Gallery Card 3: High-Rise -->
+                    <div class="gallery-card-container" data-aos="fade-up" data-aos-delay="400">
+                        <div class="gallery-card">
+                            <!-- **IMAGE HERE**: Replace with a photo of a high-rise building -->
+                            <img src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg?cs=srgb&dl=pexels-rickyrecap-1662159.jpg&fm=jpg" alt="Gleaming high-rise building windows">
+                            <div class="card-caption"><h3>High-Rise Buildings</h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homepage CTA Section -->
+        <section class="home-cta-section">
+            <div class="container" data-aos="zoom-in">
+                <h2>Ready for a Sparkling Clean?</h2>
+                <p>Let us bring the shine back to your property. Get a free, no-obligation quote today!</p>
+                <a href="#contact" class="cta-button user-action-link">
+                    <span>Contact Us Now    <i class="fas fa-envelope"></i></span>
+                    <!-- <i class="fas fa-arrow-right"></i> -->
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- ===== END: NEW SECTIONS FOR HOME PAGE ===== -->
+        <!-- ============================================ -->
+        
+        <!-- Quick Booking Section for Logged-in Users -->
+        <section class="quick-booking-section" id="quick-booking-section" style="display: none;">
+            <div class="container">
+                <div class="quick-booking-content glass-effect" data-aos="fade-up">
+                    <h2 data-aos="fade-down">Ready to Book Your Cleaning?</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Welcome back! Quick book your next window cleaning service.</p>
+                    
+                    <div class="quick-booking-options" data-aos="fade-up" data-aos-delay="200">
+                        <div class="booking-option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Residential</h3>
+                            <p>Perfect for homes and apartments</p>
+                            <button class="cta-button quick-book-btn" data-service="Residential Cleaning">
+                                <span>Book Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="booking-option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Commercial</h3>
+                            <p>Ideal for offices and businesses</p>
+                            <button class="cta-button quick-book-btn" data-service="Commercial Cleaning">
+                                <span>Book Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="booking-option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3>Gutter & Siding</h3>
+                            <p>Complete exterior cleaning</p>
+                            <button class="cta-button quick-book-btn" data-service="Gutter & Siding Wash">
+                                <span>Book Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-booking-footer" data-aos="fade-up" data-aos-delay="300">
+                        <p><i class="fas fa-clock"></i> Average booking time: 2 minutes</p>
+                        <p><i class="fas fa-shield-alt"></i> Secure and protected</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <main id="services" class="page">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-down">Our Services</h1>
+            <p class="page-subtitle" data-aos="fade-down" data-aos-delay="100">Tailored solutions for a spotless shine.</p>
+            <div class="service-grid">
+                <div class="service-card glass-effect" data-aos="fade-up"><div class="service-card__icon"><i class="fas fa-home"></i></div><h3 class="service-card__title">Residential Cleaning</h3><p class="service-card__description">From single-family homes to apartments, we make your home's windows sparkle inside and out.</p><div class="ripple-effect"></div></div>
+                <div class="service-card glass-effect" data-aos="fade-up" data-aos-delay="200"><div class="service-card__icon"><i class="fas fa-building"></i></div><h3 class="service-card__title">Commercial Cleaning</h3><p class="service-card__description">Enhance your business's curb appeal with our reliable cleaning for storefronts, offices, and high-rises.</p><div class="ripple-effect"></div></div>
+                <div class="service-card glass-effect" data-aos="fade-up" data-aos-delay="400"><div class="service-card__icon"><i class="fas fa-tint"></i></div><h3 class="service-card__title">Gutter & Siding Wash</h3><p class="service-card__description">We don't just do windows! Ask about our pressure washing services for a complete exterior clean.</p><div class="ripple-effect"></div></div>
+            </div>
+            
+            <!-- Testimonials Section -->
+            <section class="testimonials-section" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card glass-effect" data-aos="fade-up">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Sparkling Windows transformed our home! The team was professional, punctual, and the results were incredible. Our windows haven't looked this good in years!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Sarah Johnson">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>Residential Client</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card glass-effect" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Outstanding service for our office building! They handled our 20-story building efficiently and safely. Highly recommend for commercial properties."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Michael Chen">
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <span>Commercial Client</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card glass-effect" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Eco-friendly cleaning that actually works! They used safe products and left our windows spotless. The booking process was so easy too."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Emma Davis">
+                            <div>
+                                <h4>Emma Davis</h4>
+                                <span>Residential Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feedback Form -->
+                <div class="feedback-section glass-effect" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Share Your Experience</h3>
+                    <form id="feedback-form" class="feedback-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="feedback-name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="feedback-email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="feedback-rating" required>
+                                <option value="" disabled selected>Rate your experience</option>
+                                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                                <option value="3">⭐⭐⭐ Good</option>
+                                <option value="2">⭐⭐ Fair</option>
+                                <option value="1">⭐ Poor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="feedback-message" rows="4" placeholder="Tell us about your experience..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <span>Submit Review</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <main id="about" class="page">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-down">About Sparkling Window Cleaners</h1>
+            <section class="values-section" data-aos="fade-up">
+                <div class="floating-icon" style="--i:1;"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"></path></svg><span>Trust</span></div>
+                <div class="floating-icon" style="--i:2;"><svg viewBox="0 0 24 24"><path d="M9 21.035l-9-8.638 2.791-2.87 6.209 5.975L21.209 2.87l2.791 2.87z"></path></svg><span>Safety</span></div>
+                <div class="floating-icon" style="--i:3;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path></svg><span>Eco-Friendly</span></div>
+            </section>
+            <section class="timeline-section" data-aos="fade-up">
+                <h2 class="section-title">Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right"><div class="timeline-dot"></div><div class="timeline-content"><h3>2018 - The Spark</h3><p>Our founder, Jane Doe, started with a bucket and a squeegee, driven by a passion for perfection.</p></div></div>
+                    <div class="timeline-item" data-aos="fade-left"><div class="timeline-dot"></div><div class="timeline-content"><h3>2020 - Growing the Team</h3><p>We expanded our team and invested in professional-grade, eco-friendly equipment to serve more clients.</p></div></div>
+                    <div class="timeline-item" data-aos="fade-right"><div class="timeline-dot"></div><div class="timeline-content"><h3>2024 - A Clear Future</h3><p>Became the leading window cleaning service in the region, known for our reliability and sparkling results.</p></div></div>
+                </div>
+            </section>
+            <section class="team-section" data-aos="fade-up">
+                <h2 class="section-title">Meet the Team</h2>
+                <div class="team-grid">
+                    <div class="team-member-card"><div class="team-member-card-inner"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Team Member Jane Doe"><h4>Jane Doe</h4><p>Founder & CEO</p></div></div>
+                    <div class="team-member-card"><div class="team-member-card-inner"><img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Team Member John Smith"><h4>John Smith</h4><p>Lead Technician</p></div></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <main id="gallery" class="page">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-down">Our Work</h1>
+            <p class="page-subtitle" data-aos="fade-down" data-aos-delay="100">Seeing is believing. Check out our sparkling results.</p>
+            <div class="before-after-container" data-aos="fade-up">
+                <div class="ba-slider"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8qpPkCyMbf9LKhUNmiEPCwXZDuinTibiO8Q&s" alt="Before Cleaning"><div class="ba-resize"><img src="data:image/jpeg;base64,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" alt="After Cleaning"></div><span class="ba-handle"></span></div>
+            </div>
+            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://images.unsplash.com/photo-1542379361-34345e5a383f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" data-fancybox="gallery" class="gallery-item"><img src="https://lighthousewindows.ca/wp-content/uploads/2020/01/clean-windows-collingwood-barrie-ontario.jpg" alt="Clean residential window"><div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div></a>
+                <a href="https://images.unsplash.com/photo-1600494448995-199a2a7e4479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" data-fancybox="gallery" class="gallery-item"><img src="https://media.istockphoto.com/id/504403109/photo/clear-blue-sky.jpg?s=612x612&w=0&k=20&c=b01oacaCHIax0jcdp_8TLfd76VbcKn7e6Pdp_RniIdo=" alt="Squeegee on a window"><div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div></a>
+                <a href="https://images.unsplash.com/photo-1616633630464-90f1d4361595?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" data-fancybox="gallery" class="gallery-item"><img src="https://supreme-window.com/wp-content/uploads/2022/12/Your-Complete-Guide-to-Large-Commercial-Windows.jpg" alt="Commercial building windows"><div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div></a>
+            </div>
+            
+            <!-- Testimonials Section -->
+            <section class="testimonials-section" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card glass-effect" data-aos="fade-up">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Sparkling Windows transformed our home! The team was professional, punctual, and the results were incredible. Our windows haven't looked this good in years!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Sarah Johnson">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>Residential Client</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card glass-effect" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Outstanding service for our office building! They handled our 20-story building efficiently and safely. Highly recommend for commercial properties."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Michael Chen">
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <span>Commercial Client</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card glass-effect" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Eco-friendly cleaning that actually works! They used safe products and left our windows spotless. The booking process was so easy too."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Emma Davis">
+                            <div>
+                                <h4>Emma Davis</h4>
+                                <span>Residential Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feedback Form -->
+                <div class="feedback-section glass-effect" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Share Your Experience</h3>
+                    <form id="feedback-form" class="feedback-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="feedback-name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="feedback-email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="feedback-rating" required>
+                                <option value="" disabled selected>Rate your experience</option>
+                                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                                <option value="3">⭐⭐⭐ Good</option>
+                                <option value="2">⭐⭐ Fair</option>
+                                <option value="1">⭐ Poor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="feedback-message" rows="4" placeholder="Tell us about your experience..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <span>Submit Review</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+    <!-- // index.html
+
+// ... (keep all code before the booking form) ... -->
+
+    <main id="booking" class="page">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-down">Book Your Cleaning</h1>
+            <div class="booking-form-container glass-effect" data-aos="zoom-in">
+                <form id="booking-form">
+                    <div class="form-step active" data-step="1">
+                        <h2>Step 1: Choose Your Service</h2>
+                        <div class="form-group"><select id="booking-service" required><option value="" disabled selected>Select a service...</option><option value="Residential Cleaning">Residential Cleaning</option><option value="Commercial Cleaning">Commercial Cleaning</option><option value="Gutter & Siding Wash">Gutter & Siding Wash</option></select></div>
+                        <div class="form-group"><input type="number" id="booking-windows" placeholder="Number of windows (approx)" required min="1"></div>
+                        <button type="button" class="cta-button next-step">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <div class="form-step" data-step="2">
+                        <h2>Step 2: Pick a Date & Time</h2>
+                        <div class="form-group"><label>Preferred Date</label><input type="date" id="booking-date" required min=""></div>
+                        <div class="form-group"><label>Preferred Time</label><input type="time" id="booking-time" required></div>
+                        <button type="button" class="cta-button prev-step"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button type="button" class="cta-button next-step">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <div class="form-step" data-step="3">
+                        <h2>Step 3: Your Details</h2>
+                        <div class="form-group"><input type="text" id="booking-name" placeholder="Full Name" required></div>
+                        <div class="form-group"><input type="email" id="booking-email" placeholder="Email Address" required></div>
+                        <div class="form-group"><input type="tel" id="booking-phone" placeholder="Phone Number" required></div>
+                        <div class="form-group"><textarea rows="3" id="booking-address" placeholder="Enter Your Full Address (Street, City, Postal Code)" required></textarea></div>
+                        <div class="form-group"><textarea rows="3" id="booking-notes" placeholder="Additional Notes (Optional)"></textarea></div>
+                        <button type="button" class="cta-button prev-step"><i class="fas fa-arrow-left"></i> Back</button>
+                        <!-- MODIFIED: Changed from "submit" to "button" with class "next-step" -->
+                        <button type="button" class="cta-button next-step">Proceed to Payment <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    
+                    <!-- NEW: Step 4 - Payment Section -->
+                    <div class="form-step" data-step="4">
+                        <h2>Step 4: Secure Payment</h2>
+                        <div class="payment-tabs">
+                            <button type="button" class="payment-tab active" data-payment-method="card">
+                                <i class="fas fa-credit-card"></i> Credit Card
+                            </button>
+                            <button type="button" class="payment-tab" data-payment-method="cash">
+                                <i class="fas fa-money-bill-wave"></i> Cash
+                            </button>
+                        </div>
+
+                        <!-- Credit Card Form -->
+                        <div id="card-payment-form" class="payment-form-content active">
+                            <div class="form-group card-number-group">
+                                <label for="card-number">Card Number</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="card-number" placeholder="4242 4242 4242 4242" required>
+                                    <i id="card-type-icon" class="fab fa-cc-visa"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Cardholder Name</label>
+                                <input type="text" id="card-name" placeholder="JOHN M. DOE" required>
+                            </div>
+                            <div class="form-row-payment">
+                                <div class="form-group">
+                                    <label for="card-expiry">Expiry Date</label>
+                                    <input type="text" id="card-expiry" placeholder="MM / YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvv">CVV</label>
+                                    <input type="text" id="card-cvv" placeholder="123" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cash Form -->
+                        <div id="cash-payment-form" class="payment-form-content">
+                            <p class="cash-info"><i class="fas fa-info-circle"></i> You have selected to pay with cash. Payment will be collected upon completion of the service. Please click below to confirm your booking.</p>
+                        </div>
+
+                        <div class="payment-buttons">
+                            <button type="button" class="cta-button prev-step"><i class="fas fa-arrow-left"></i> Back</button>
+                            <button type="submit" class="cta-button" id="submit-payment-btn">
+                                <span class="btn-text">Pay Now</span>
+                                <div class="spinner"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- MODIFIED: Step 5 (was 4) - Success Message with Checkmark -->
+                    <div class="form-step success-message" data-step="5">
+                        <div class="success-animation">
+                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                            </svg>
+                        </div>
+                        <div class="sparkle-container"></div>
+                        <h2>Thank You!</h2>
+                        <p>Your booking is confirmed. We'll be in touch shortly!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+<!-- // ... (keep all code after the booking form) ... -->
+    <main id="contact" class="page">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-down">Get In Touch</h1>
+            <p class="page-subtitle" data-aos="fade-down" data-aos-delay="100">Ready to make your windows sparkle? Contact us today!</p>
+            
+            <div class="contact-layout">
+                <div class="contact-info-wrapper" data-aos="fade-right">
+                    <div class="contact-info-card glass-effect">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>73 Kenmore Ave, Harrow HA3 8PA, UK</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+441234567890">+44 (0) 123 456 7890</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact@sparklingwindows.co">contact@sparklingwindows.co</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Licensed & Insured</h4>
+                                <p>Fully licensed, bonded, and insured for your peace of mind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper glass-effect" data-aos="fade-left">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group animated-border">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group animated-border">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group animated-border">
+                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">Your Phone</label>
+                        </div>
+                        <div class="form-group animated-border"> 
+                            <select id="inquiry-type" name="inquiry_type" required>
+                                <option value="" disabled selected>Type of Inquiry</option>
+                                <option value="residential">Residential Cleaning</option>
+                                <option value="commercial">Commercial Cleaning</option>
+                                <option value="quote">Request Quote</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div> 
+                        <div class="form-group animated-border">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="form-success-msg">Message Sent Successfully!</div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Google Maps Section -->
+            <div class="map-section" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="section-title">Find Us</h3>
+                <div class="map-container glass-effect">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.7406627270234!2d-0.32366882337479147!3d51.59291527183294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761385cdd25e99%3A0x56ea2d45953709e4!2s73%20Kenmore%20Ave%2C%20Harrow%20HA3%208PA%2C%20UK!5e1!3m2!1sen!2sin!4v1754412700505!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-overlay">
+                        <div class="map-info">
+                            <h4>Sparkling Window Cleaners Ltd.</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> 73 Kenmore Ave, Harrow HA3 8PA, UK</p>
+                            <p><i class="fas fa-phone"></i> +44 (0) 123 456 7890</p>
+                            <a href="https://www.google.com/maps/place/73+Kenmore+Ave,+Harrow+HA3+8PA,+UK/@51.5929153,-0.3236688,550m/data=!3m2!1e3!4b1!4m6!3m5!1s0x48761385cdd25e99:0x56ea2d45953709e4!8m2!3d51.5929153!4d-0.3210939!16s%2Fg%2F11c23wxm7w?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="cta-button">
+                                <span>Get Directions</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main id="admin" class="page">
+        <div class="admin-body">
+            <aside class="admin-sidebar">
+                <div class="logo">
+                    <img src="/image/logo.png" alt="Sparkling Window Cleaners Ltd. Logo">
+                    <span>Admin Panel</span>
+                </div>
+                <nav class="admin-nav">
+                    <a href="#" class="admin-nav-link active" data-section="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="bookings">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Bookings</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="inquiries">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <span>Inquiries</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="testimonials">
+                        <i class="fas fa-star"></i>
+                        <span>Testimonials</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="analytics">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytics</span>
+                    </a>
+                    <a href="#" class="admin-nav-link" data-section="vendors">
+                        <i class="fas fa-users"></i>
+                        <span>Vendors</span>
+                    </a>
+                </nav>
+                <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+            </aside>
+            
+            <div class="admin-main-content">
+                <header class="admin-header">
+                    <h1 id="admin-section-title">Dashboard</h1>
+                    <div class="admin-header-actions">
+                        <button class="admin-btn" id="refresh-data">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh
+                        </button>
+                        <button class="admin-btn" id="export-data">
+                            <i class="fas fa-download"></i>
+                            Export
+                        </button>
+                    </div>
+                </header>
+                
+                <!-- Dashboard Section -->
+                <div class="admin-section active" id="dashboard-section">
+                    <div class="admin-stats-grid">
+                        <div class="stat-card" data-aos="fade-up">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="total-bookings">0</h3>
+                                <p>Total Bookings</p>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="pending-bookings">0</h3>
+                                <p>Pending Bookings</p>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="new-inquiries">0</h3>
+                                <p>New Inquiries</p>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="avg-rating">4.8</h3>
+                                <p>Average Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-widgets">
+                        <div class="widget-card recent-bookings" data-aos="fade-up">
+                            <h3>Recent Bookings</h3>
+                            <div class="bookings-list" id="recent-bookings-list">
+                                <!-- Bookings will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="widget-card chart-card" data-aos="fade-up" data-aos-delay="100">
+                            <h3>Monthly Bookings</h3>
+                            <canvas id="bookingsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bookings Section -->
+                <div class="admin-section" id="bookings-section">
+                    <div class="section-header">
+                        <h2>Manage Bookings</h2>
+                        <div class="filters">
+                            <select id="booking-status-filter">
+                                <option value="all">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                            <input type="date" id="booking-date-filter" placeholder="Filter by date">
+                        </div>
+                    </div>
+                    <div class="bookings-table-container">
+                        <table class="admin-table" id="bookings-table">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Contact</th>
+                                    <th>Service</th>
+                                    <th>Windows</th>
+                                    <th>Date & Time</th>
+                                    <th>Address</th>
+                                    <th>Notes</th>
+                                    <th>Assigned Vendor</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookings-table-body">
+                                <!-- Bookings will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Inquiries Section -->
+                <div class="admin-section" id="inquiries-section">
+                    <div class="section-header">
+                        <h2>Customer Inquiries</h2>
+                        <div class="filters">
+                            <select id="inquiry-type-filter">
+                                <option value="all">All Types</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="quote">Quote Request</option>
+                                <option value="general">General</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inquiries-list" id="inquiries-list">
+                        <!-- Inquiries will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Testimonials Section -->
+                <div class="admin-section" id="testimonials-section">
+                    <div class="section-header">
+                        <h2>Customer Testimonials</h2>
+                    </div>
+                    <div class="testimonials-list" id="admin-testimonials-list">
+                        <!-- Testimonials will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Analytics Section -->
+                <div class="admin-section" id="analytics-section">
+                    <div class="analytics-grid">
+                        <div class="widget-card chart-card">
+                            <h3>Revenue Analytics</h3>
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                        <div class="widget-card chart-card">
+                            <h3>Service Distribution</h3>
+                            <canvas id="serviceChart"></canvas>
+                        </div>
+                        <div class="widget-card chart-card">
+                            <h3>Customer Satisfaction</h3>
+                            <canvas id="satisfactionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendors Section -->
+                <div class="admin-section" id="vendors-section">
+                    <div class="section-header">
+                        <h2>Manage Vendors</h2>
+                        <button class="admin-btn" id="add-vendor-btn">
+                            <i class="fas fa-plus"></i>
+                            Add Vendor
+                        </button>
+                    </div>
+                    
+                    <!-- Vendor Management Tabs -->
+                    <div class="vendor-tabs">
+                        <button class="vendor-tab active" data-tab="vendors-list">Vendors List</button>
+                        <button class="vendor-tab" data-tab="assignments">Assignments</button>
+                    </div>
+                    
+                    <!-- Vendors List Tab -->
+                    <div class="vendor-tab-content active" id="vendors-list-tab">
+                        <div class="vendors-table-container">
+                            <table class="admin-table" id="vendors-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Specializations</th>
+                                        <th>Rating</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="vendors-table-body">
+                                    <!-- Vendors will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Assignments Tab -->
+                    <div class="vendor-tab-content" id="assignments-tab">
+                        <div class="assignments-container">
+                            <div class="assignments-filters">
+                                <select id="assignment-status-filter">
+                                    <option value="all">All Status</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="confirmed">Confirmed</option>
+                                    <option value="completed">Completed</option>
+                                </select>
+                                <select id="assignment-vendor-filter">
+                                    <option value="all">All Vendors</option>
+                                </select>
+                            </div>
+                            <div class="assignments-table-container">
+                                <table class="admin-table" id="assignments-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Client</th>
+                                            <th>Service</th>
+                                            <th>Date & Time</th>
+                                            <th>Assigned Vendor</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="assignments-table-body">
+                                        <!-- Assignments will be populated by JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main id="profile" class="page">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-down">My Profile</h1>
+            <div id="profile-content" class="glass-effect" data-aos="fade-up"></div>
+        </div>
+    </main>
+    <!-- ... FOOTER ... -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about"><a href="#home" class="logo nav-link"><h4>Sparkling Windows</h4></a><a href="#admin" id="footer-admin-cta" class="footer-admin-cta">Bringing clarity and shine to your world, one window at a time.</a></div>
+                <div class="footer-section links"><h4>Quick Links</h4><ul><li><a href="#services" class="nav-link">Our Services</a></li><li><a href="#about" class="nav-link">About The Team</a></li><li><a href="#gallery" class="nav-link">View Our Work</a></li><li><a href="#booking" class="nav-link user-action-link">Get a Quote</a></li></ul></div>
+                <div class="footer-section contact"><h4>Contact Us</h4><p><i class="fas fa-map-marker-alt"></i> 73 Kenmore Ave, Harrow HA3 8PA, UK</p><p><i class="fas fa-phone"></i> (123) 456-7890</p><p><i class="fas fa-envelope"></i> contact@sparklingwindows.co</p></div>
+                <div class="footer-section social"><h4>Follow Us</h4><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+            </div>
+            <div class="footer-bottom"> © 2024 Sparkling Window Cleaners Ltd. | All Rights Reserved. </div>
+        </div>
+    </footer>
+
+
+    <!-- External JS Libraries (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Maps API (Replace YOUR_API_KEY) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD...yourkey...&callback=initMap" async defer></script>
+
+<script>
+    // ===== Refresh Admin Page =====
+    document.getElementById("refresh-data").addEventListener("click", () => {
+        location.reload();
+    });
+
+    // ===== Export All Data to CSV =====
+    document.getElementById("export-data").addEventListener("click", () => {
+        // Helper function to sanitize data for CSV to handle commas, quotes, and newlines
+        function sanitizeCsvCell(cellData) {
+            if (cellData === null || cellData === undefined) {
+                return "";
+            }
+            let cell = String(cellData);
+            // If the cell contains a comma, a quote, or a newline, wrap it in double quotes
+            if (cell.search(/("|,|\n)/g) >= 0) {
+                // Escape existing double quotes by doubling them
+                cell = `"${cell.replace(/"/g, '""')}"`;
+            }
+            return cell;
+        }
+
+        // Check if data arrays exist (they are global variables from script.js)
+        if (typeof bookings === 'undefined' || typeof inquiries === 'undefined' || typeof testimonials === 'undefined') {
+            showNotification('Data is not available for export yet. Please wait a moment.', 'error');
+            return;
+        }
+
+        let fullCsvContent = "";
+
+        // 1. Bookings CSV
+        const bookingHeaders = ['ID', 'Client Name', 'Client Email', 'Service', 'Windows', 'Date', 'Time', 'Status', 'Notes'];
+        const bookingKeys = ['id', 'clientName', 'clientEmail', 'service', 'windows', 'date', 'time', 'status', 'notes'];
+        let bookingsCsv = "Bookings\n";
+        bookingsCsv += bookingHeaders.join(',') + '\n';
+        bookings.forEach(row => {
+            const values = bookingKeys.map(key => sanitizeCsvCell(row[key]));
+            bookingsCsv += values.join(',') + '\n';
+        });
+        fullCsvContent += bookingsCsv + "\n\n";
+
+        // 2. Inquiries CSV
+        const inquiryHeaders = ['ID', 'Name', 'Email', 'Phone', 'Inquiry Type', 'Message', 'Date', 'Status'];
+        const inquiryKeys = ['id', 'name', 'email', 'phone', 'type', 'message', 'date', 'status'];
+        let inquiriesCsv = "Inquiries\n";
+        inquiriesCsv += inquiryHeaders.join(',') + '\n';
+        inquiries.forEach(row => {
+            const values = inquiryKeys.map(key => sanitizeCsvCell(row[key]));
+            inquiriesCsv += values.join(',') + '\n';
+        });
+        fullCsvContent += inquiriesCsv + "\n\n";
+
+        // 3. Testimonials CSV
+        const testimonialHeaders = ['ID', 'Name', 'Email', 'Rating', 'Message', 'Date', 'Status'];
+        const testimonialKeys = ['id', 'name', 'email', 'rating', 'message', 'date', 'status'];
+        let testimonialsCsv = "Testimonials\n";
+        testimonialsCsv += testimonialHeaders.join(',') + '\n';
+        testimonials.forEach(row => {
+            const values = testimonialKeys.map(key => sanitizeCsvCell(row[key]));
+            testimonialsCsv += values.join(',') + '\n';
+        });
+        fullCsvContent += testimonialsCsv;
+
+        // Trigger CSV download
+        const blob = new Blob([fullCsvContent], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `sparkling-windows-export-${new Date().toISOString().split('T')[0]}.csv`;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        showNotification('All data exported to CSV!', 'success');
+    });
+</script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
